@@ -1,5 +1,6 @@
 package farrant.christopher.api.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -45,15 +46,20 @@ public class AlbumRestController {
 	
 	
 	@RequestMapping(path="/{albumId}", method=RequestMethod.GET)
-	public Album getAlbumById(@PathVariable String albumId) {
+	public List<Song> getAlbumById(@PathVariable String albumId) {
 		List<Album> allAlbums = albums.findAll();
-		Album a = null;
+		List<Song> albumSongs = null;
 		for(Album album : allAlbums) {
 			if (album.getId().equals(albumId)) {
-				a = album;
+				albumSongs = new ArrayList<Song>();
+				for(Song s : songs.findAll()) {
+					if (s.getAlbum().getId().equals(albumId)) {
+						albumSongs.add(s);
+					}
+				}
 			}
 		}
-		return a;
+		return albumSongs;
 	}
 
 	@RequestMapping(method=RequestMethod.PUT, path="/{albumId}")
