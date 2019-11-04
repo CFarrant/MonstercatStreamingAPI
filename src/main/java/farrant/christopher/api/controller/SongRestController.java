@@ -60,6 +60,19 @@ public class SongRestController {
 		return song;
 	}
 	
+	@RequestMapping(method=RequestMethod.POST, path="/search")
+	public List<Song> getAllSongsContainingQuery(@RequestBody Map<String, Object> query){
+		List<Song> results = new ArrayList<Song>();
+		String[] map = query.values().toArray(new String[] {});
+		String queryString = (String)map[0];
+		for(Song s : songs.findAll()){
+			if (s.getTitle().toLowerCase().contains(queryString.toLowerCase())){
+				results.add(s);
+			}
+		}
+		return results;
+	}
+	
 	@RequestMapping(method=RequestMethod.POST, path="")
 	@Transactional
 	public Song createSong(@RequestBody Song song, HttpServletRequest request) {
