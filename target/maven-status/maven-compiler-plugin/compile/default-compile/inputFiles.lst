@@ -1,4 +1,5 @@
 C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farrant\christopher\api\exceptions\NoSuchEntityException.java
+C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farrant\christopher\api\controller\PlaylistRestController.java
 C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farrant\christopher\api\model\User.java
 C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farrant\christopher\api\model\Album.java
 C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farrant\christopher\api\MonstercatStreamingApiApplication.java
@@ -19,4 +20,5 @@ C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farra
 C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farrant\christopher\api\AuthenticationService.java
 C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farrant\christopher\api\configuration\MonstercatStreamingApiConfiguration.java
 C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farrant\christopher\api\controller\ArtistRestController.java
+C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farrant\christopher\api\model\Playlist.java
 C:\Users\Christopher\Documents\GitHub\MonstercatStreamingAPI\src\main\java\farrant\christopher\api\model\repository\SongJpaRepository.java
