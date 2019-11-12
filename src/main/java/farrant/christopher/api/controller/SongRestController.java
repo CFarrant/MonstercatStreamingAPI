@@ -49,6 +49,17 @@ public class SongRestController {
 		return song;
 	}
 	
+	@RequestMapping(method=RequestMethod.GET, path="/{limit}/{skip}")
+	public List<Song> getAllSongsBetweenStartEnd(@PathVariable int limit, @PathVariable int skip){
+		List<Song> results = new ArrayList<Song>();
+		for(Song s : songs.findAll()) {
+			if (s.getTrack_id() > skip && results.size() < limit) {
+				results.add(s);
+			}
+		}
+		return results;
+	}
+	
 	@RequestMapping(method=RequestMethod.GET, path="/album/{albumId}")
 	public List<Song> getAllSongsByAlbumId(@PathVariable String albumId) {
 		List<Song> song = new ArrayList<Song>();
@@ -71,6 +82,12 @@ public class SongRestController {
 			}
 		}
 		return results;
+	}
+	
+	@RequestMapping(method=RequestMethod.GET, path="/count")
+	public int getAllSongsCount() {
+		List<Song> songsList = songs.findAll();
+		return songsList.size();
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, path="")

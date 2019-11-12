@@ -35,7 +35,7 @@ public class EmailService {
 		Session mailSession = Session.getDefaultInstance(props, 
 			new Authenticator(){
 		    	protected PasswordAuthentication getPasswordAuthentication() {
-		            return new PasswordAuthentication("MonstercatStreamingService@gmail.com", "MonstercatStreamingServiceAPIDev");
+		            return new PasswordAuthentication("MonstercatStreamingService@gmail.com", "MonstercatStreamingServiceAPI");
 		        }
 		 	}
 		);

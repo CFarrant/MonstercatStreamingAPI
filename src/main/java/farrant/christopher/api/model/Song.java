@@ -57,6 +57,14 @@ public class Song {
 		this.album = album;
 	}
 
+	public int getTrack_id() {
+		return track_id;
+	}
+
+	public void setTrack_id(int track_id) {
+		this.track_id = track_id;
+	}
+
 	public Album getAlbum() {
 		return album;
 	}
